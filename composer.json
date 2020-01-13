@@ -1,0 +1,44 @@
+{
+    "name": "henriqueramos/recaptcha_middleware",
+    "type": "library",
+    "description": "Laravel reCaptcha Middleware it's a Composer package created to help us to validate reCaptcha payloads during the initial steps of request lifecycle.",
+    "keywords": ["laravel", "package", "middleware", "recaptcha", "Henrique Ramos", "madeInBrazil"],
+    "homepage": "https://henriqueramos.eti.br/opensources",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Henrique Ramos",
+            "email": "henrique@henriqueramos.eti.br",
+            "homepage": "https://henriqueramos.eti.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": ">=5.7",
+        "google/recaptcha": "^1.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "slevomat/coding-standard": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RamosHenrique\\reCaptchaMiddleware\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpcs": [
+            "@php vendor/bin/phpcs --extensions=php --encoding=utf-8 --tab-width=4 -sp src"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RamosHenrique\\reCaptchaMiddleware\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
